@@ -1,0 +1,27 @@
+#nav_bar > div > div > a {
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+.gris {
+  background: rgba(0, 0, 0, 0.377);
+}
+
+.top-nav-collapse {
+  background: rgb(0, 0, 0);
+}
+
+#imagen_menu > img {
+  width: auto;
+  height: 50px;
+}
+#botonnavstyle > a:hover{
+border-bottom: 1px white solid;
+}
+
+@media (max-width: 375px) {
+
+  #imagen_menu > img {
+    width: auto;
+    height: 0;
+  }
+}

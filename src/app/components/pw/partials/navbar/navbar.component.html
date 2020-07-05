@@ -1,0 +1,71 @@
+<nav
+  class="navbar navbar-expand-lg navbar-dark gris scrolling-navbar fixed-top"
+  id="nav_bar"
+>
+  <div id="imagen_menu">
+    <img
+      src="../../../../../assets/logos/logoHorizontal.png"
+      class="img-responsive ml-4 mr-5"
+      alt="Emurcia"
+    />
+  </div>
+  <!-- Boton navbar -->
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarNavAltMarkup"
+    aria-controls="navbarNavAltMarkup"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div
+    class="collapse navbar-collapse"
+    id="navbarNavAltMarkup"
+    style="justify-content: center;"
+  >
+    <div
+      id="botonnavstyle"
+      class="navbar-nav"
+      style="justify-content: center; align-items: center;"
+    >
+      <a
+        *ngIf="!auth.isLoggedIn()"
+        class="nav-item nav-link active mr-4"
+        type="button"
+        href="#Inicio"
+      >
+        INICIO
+      </a>
+      <!-- <a class="nav-item nav-link active mr-4" type="button" href="#Nosotros">
+        NOSOTROS
+      </a>
+
+      <a class="nav-item nav-link active mr-4" type="button" href="#Aliados">
+        ALIADOS
+      </a> -->
+      <!-- <a href="" class=" mr-4">
+        <img src="../../../../../assets/logos/circulo_logo.png" style="width: 70px;" alt="">
+      </a> -->
+      <!-- <a class="nav-item nav-link active mr-4" href="#Servicios" type="button">
+        SERVICIOS
+      </a>
+      <a class="nav-item nav-link active mr-4" type="button" href="#Contacto">
+        CONTACTO
+      </a> -->
+      <a
+        *ngIf="!auth.isLoggedIn()"
+        class="nav-item nav-link active mr-4"
+        type="button"
+        routerLink="/login"
+      >
+        LOG IN
+      </a>
+      <a href="" *ngIf="auth.isLoggedIn()" routerLink ="/profile">{{auth.getUserDetails()?.usuario}}</a>
+      <a href="" *ngIf="auth.isLoggedIn()" routerLink="Home" (click)="auth.logout()">LogOut</a>
+    </div>
+  </div>
+</nav>
